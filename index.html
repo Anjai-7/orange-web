@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange Business Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .dropdown-menu {
+            background-color: #ff7b00 !important;
+        }
+
+        .dropdown-item {
+            color: white !important;
+        }
+
+        .dropdown-item:hover {
+            background-color: #fdb03c !important;
+        }
+
+        .btn-outline-warning {
+            --bs-btn-color: #fdb03c;
+            --bs-btn-hover-bg: #ff7b00;
+        }
+
+        .icon-card {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #ff7b00;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .icon-card:hover {
+            background-color: #ff7b00;
+            color: white;
+            transform: translateY(-10px);
+        }
+
+        .icon-card img {
+            font-size: 50px;
+            color: #ff7b00;
+        }
+
+        .section-header {
+            color: #ff7b00;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .row-cols-1, .row-cols-md-2, .row-cols-lg-3 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .testimonial-item {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .testimonial-item:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #ff7b00;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+        .test-bg-light {
+            background-color: #ff7b00;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #ff9900;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: #ffffff;">
+                <img src="/orange.png" alt="Logo">
+                Orange
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProduct" role="button" data-bs-toggle="dropdown">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Mobile Phones</a></li>
+                            <li><a class="dropdown-item" href="#">Laptops</a></li>
+                            <li><a class="dropdown-item" href="#">Tablets</a></li>
+                            <li><a class="dropdown-item" href="#">Desktops</a></li>
+                            <li><a class="dropdown-item" href="#">AI Solutions</a></li>
+                            <li><a class="dropdown-item" href="#">Servers</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                 
+                    <button class="btn" id="searchBtn" onclick="toggleSearch()">
+                        <img src="/magnifying-glass.png" width="30" height="30" alt="Search">
+                    </button>
+                    
+                    <a href="#" class="btn btn-outline-warning ms-3" style="color: #ffffff;">Sign In</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div
+        class="container-fluid"
+
+    >
+        <img class="col-md-12 w-100" src="/bis.jpg" >
+    </div>
+    
+    <section id="about" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="section-header">About Us</h2>
+            <p class="lead">Orange is a leading tech company that provides innovative solutions and products, driven by cutting-edge technology.</p>
+            <p>We specialize in mobile, web, and software development, as well as offering AI solutions, cybersecurity, and server infrastructure. Our mission is to make technology work for you, streamlining your operations and optimizing business growth.</p>
+        </div>
+    </section>
+    <section id="products" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="section-header">Our Products</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="icon-card">
+                        <img src="/smartphone-call.png" width="50" height="50" alt="Mobile">
+                        <h3>Mobile Phones</h3>
+                        <p>Explore the latest smartphones with cutting-edge features.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="icon-card">
+                        <img src="/laptop.png" width="50" height="50" alt="Laptop">
+                        <h3>Laptops</h3>
+                        <p>High-performance laptops for work and play.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="icon-card">
+                        <img src="/tablet.png" width="50" height="50" alt="Tablet">
+                        <h3>Tablets</h3>
+                        <p>Lightweight and versatile tablets for all your needs.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="icon-card">
+                        <img src="/computer.png" width="50" height="50" alt="PC">
+                        <h3>Desktops</h3>
+                        <p>Powerful desktop computers for your business and personal use.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="icon-card">
+                        <img src="/ai.png" width="50" height="50" alt="AI">
+                        <h3>AI Solutions</h3>
+                        <p>AI-driven products to enhance your life and business.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="icon-card">
+                        <img src="/servers.png" width="50" height="50" alt="Server">
+                        <h3>Servers</h3>
+                        <p>Secure and scalable server solutions for businesses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-header">Our Services</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="icon-card">
+                        <img src="/smartphone-call.png" width="50" height="50" alt="Mobile">
+                        <h3>Mobile Development</h3>
+                        <p>We build powerful and scalable mobile applications.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="icon-card">
+                        <img src="/laptop.png" width="50" height="50" alt="Laptop">
+                        <h3>Web Development</h3>
+                        <p>Custom websites designed to meet your business needs.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="icon-card">
+                        <img src="/computer.png" width="50" height="50" alt="PC">
+                        <h3>Software Solutions</h3>
+                        <p>End-to-end software development for your company.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="icon-card">
+                        <img src="/servers.png" width="50" height="50" alt="Server">
+                        <h3>Building Servers</h3>
+                        <p>Designing and deploying scalable and efficient server infrastructure.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="icon-card">
+                        <img src="/server.png" width="50" height="50" alt="Cloud">
+                        <h3>Cloud Solutions</h3>
+                        <p>Leverage the cloud to store, scale, and access your data.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-header">What Our Clients Say</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col testimonial-item">
+                    <p>"Orange helped us scale our app, and the results were amazing!"</p>
+                    <h5>- John Doe</h5>
+                    <p>CEO, TechCo</p>
+                </div>
+                <div class="col testimonial-item">
+                    <p>"Their team delivered exactly what we needed, on time and within budget."</p>
+                    <h5>- Jane Smith</h5>
+                    <p>Founder, Webify</p>
+                </div>
+                <div class="col testimonial-item">
+                    <p>"Highly recommend Orange for any software project!"</p>
+                    <h5>- Mark Johnson</h5>
+                    <p>CTO, Innovators</p>
+                </div>
+                <div class="col testimonial-item">
+                    <p>"Excellent customer service and top-quality product delivery."</p>
+                    <h5>- Emily White</h5>
+                    <p>Founder, GreenTech</p>
+                </div>
+                <div class="col testimonial-item">
+                    <p>"We couldn't have asked for a better partner in our digital transformation journey."</p>
+                    <h5>- David Harris</h5>
+                    <p>COO, DigitalX</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section -->
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="section-header" style="font-size: 3rem;">Our Portfolio</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+                <div class="col">
+                    <div class="portfolio-item">
+                        <img src="/3426526.jpg" class="img-fluid rounded-3" style="height: 300px; object-fit: cover;" alt="Project 1">
+                        <div class="portfolio-description">
+                            <h4 style="font-size: 1.5rem; margin-top: 10px;">Project 1</h4>
+                            <p style="font-size: 1.1rem;">Web Design and Development</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="portfolio-item">
+                        <img src="/pexels-pixabay-147413.jpg" class="img-fluid rounded-3" style="height: 300px; object-fit: cover;" alt="Project 2">
+                        <div class="portfolio-description">
+                            <h4 style="font-size: 1.5rem; margin-top: 10px;">Project 2</h4>
+                            <p style="font-size: 1.1rem;">Mobile App Development</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="portfolio-item">
+                        <img src="/21034578.jpg" class="img-fluid rounded-3" style="height: 300px; object-fit: cover;" alt="Project 3">
+                        <div class="portfolio-description">
+                            <h4 style="font-size: 1.5rem; margin-top: 10px;">Project 3</h4>
+                            <p style="font-size: 1.1rem;">Software Development</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="portfolio-item">
+                        <img src="/pexels-cookiecutter-1148820.jpg" class="img-fluid rounded-3" style="height: 300px; object-fit: cover;" alt="Project 4">
+                        <div class="portfolio-description">
+                            <h4 style="font-size: 1.5rem; margin-top: 10px;">Project 4</h4>
+                            <p style="font-size: 1.1rem;">Cloud Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="section-header" style="font-size: 3rem;">Contact Us</h2>
+            <p style="font-size: 1.2rem; color: #555;">We'd love to hear from you! Reach out to us with any inquiries or feedback.</p>
+            
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label" style="font-size: 1.1rem;">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label" style="font-size: 1.1rem;">Your Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label" style="font-size: 1.1rem;">Your Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-warning">Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="col-md-6 " style="text-align: center;">
+                    <img src="/buildings.png" width="100" height="100">
+                    <h4 style="font-size: 1.5rem; margin-bottom: 20px;">Our Contact Info</h4>
+                    <p style="font-size: 1.1rem;">Address: 123 Business Avenue, Orange City, OC 12345</p>
+                    <p style="font-size: 1.1rem;">Phone: +1 234 567 890</p>
+                    <p style="font-size: 1.1rem;">Email: contact@orangebusiness.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+    <footer>
+        <p>&copy; 2025 Orange Business Portfolio</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms & Conditions</a> | 
+            <a href="#">Support</a>
+        </div>
+    </footer>
+    <script>
+        // Function to toggle the search form visibility
+        function toggleSearch() {
+            const searchForm = document.getElementById("searchForm");
+            const searchBtn = document.getElementById("searchBtn");
+    
+            if (searchForm.style.display === "none") {
+                searchForm.style.display = "flex"; // Show the search form
+                searchBtn.style.display = "none"; // Hide the search button
+            } else {
+                searchForm.style.display = "none"; // Hide the search form
+                searchBtn.style.display = "block"; // Show the search button again
+            }
+        }
+    </script>
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
